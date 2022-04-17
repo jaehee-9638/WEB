@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+div {
+	
+	margin: 10px;
+}
+
+body {
+	background-color: #f5f6f7;
+}
+
+.main-wrap {
+	width: vw;
+	height: vh;
+}
+
+#header {
+	text-align: center;
+	height: 100px;
+}
+
+.logo {
+	padding-left: 15%;
+	padding-top: 10px;
+	float: center;
+	width: 300px;
+	height: 70px;
+}
+
+.icon-t {
+	width: 10%;
+	height: 40px;
+	float: right;
+	margin-right: 30px;
+}
+
+#body {
+	border-top: 1px solid pink;
+	border-bottom: 1px solid pink;
+	height: 700px;
+	text-align: center;
+}
+
+button {
+	width: 150px;
+	height: 35px;
+	font-size: 13px;
+	background-color: rgb(197, 197, 197);
+	color: white;
+	border: solid 1px pink;
+	
+	
+}
+input {
+	width: 150px;
+	height: 35px;
+	font-size: 13px;
+	background-color: rgb(197, 197, 197);
+	color: white;
+	border: solid 1px pink;
+	display: inline-block;
+}
+form {
+	width: 150px;
+	height: 35px;
+	background-color: green;
+	
+}
+
+.table {
+	padding-top: 30px;
+	width: 70%;
+	height: 90%;
+	display: inline-block;
+}
+
+table {
+	border-collapse: collapse;
+	display: inline-block;
+}
+.button{
+width: 150px;
+	height: 35px;
+	display: inline-block;
+}
+
+.content {
+	height: 300px;
+	vertical-align: top -15px;
+	border-bottom: 1px solid pink;
+}
+#bottom-div {
+	width: 100%;
+	heigth: 40px;
+	
+	
+}
+th {
+	width: 200px;
+	height: 50px;
+	
+	border: 1px solid pink;
+}
+
+td {
+	width: 500px;
+	height: 50px;
+	border: 1px solid pink;
+}
+
+#footer {
+	width: 99%;
+	text-align: center;
+	display: inline-block;
+}

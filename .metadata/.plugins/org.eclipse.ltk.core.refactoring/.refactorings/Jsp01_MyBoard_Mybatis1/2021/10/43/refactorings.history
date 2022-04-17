@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;WebContent&apos;&#x0D;&#x0A;- Original project: &apos;Jsp01_MyBoard_Mybatis1&apos;&#x0D;&#x0A;- Destination element: &apos;WebContent&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     update.jsp&#x0D;&#x0A;     updateres.jsp" description="Copy files" element1="WebContent/update.jsp" element2="WebContent/updateres.jsp" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1634813199781" target="/Jsp02_MultiDelete_Mybatis/WebContent" units="0" version="1.0"/>
+</session>

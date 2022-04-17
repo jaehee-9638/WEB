@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+div {
+    margin: 5px;
+}
+
+body {
+    background: #f5f6f7;
+}
+
+.main-wrap {
+    width: vw;
+    height: vh;
+}
+
+#header {
+    text-align: center;
+    height:100px;
+}
+
+.logo{
+    padding-left:15%;
+    padding-top:10px;
+    float:center;
+    width:auto;
+    height:auto;
+}
+
+.icon-t {
+    width: 10%;
+    height: 40px;
+    float:right;
+    margin-right: 30px;
+}
+
+#body {
+    border-top: 1px solid pink;
+    border-bottom: 1px solid pink;
+    height: 700px;
+    text-align: center;
+}
+
+
+
+    #body #table{
+        width:70%;
+        height:80%;
+        display:inline-block;
+
+
+    }
+
+    .list{
+        width:8%;
+        height:50px;
+        float:left;
+        text-align:left;
+        line-height:50px;
+        margin-left:180px;
+    }
+    .text{
+        width:70%;
+        height:50px;
+        float:right;
+        text-align:left;
+    }
+
+
+    #body #table input[type=text]{
+
+        width:100%;
+        border:2px solid #aaa;
+        border-radius:4px;
+        margin:8px 0;
+        outline:none;
+        padding:8px;
+        box-sizing:border-box;
+        transition:.3s;
+
+    }
+    #body #table input[type=text]:focus{
+        border-color:dodgerBlue;
+        box-shadow:0 0 8px 0 dodgerBlue;
+
+    }
+
+    #body #insert-button{
+
+        width:70%;
+        height:5%;
+        text-align:right;
+        display:inline-block;
+    }
+    #insert-button input{
+        width: 120px;
+    height: 35px;
+    font-size: 13px;
+    background-color: rgb(197, 197, 197);
+    color: white;
+    border: solid 1px pink;
+    margin-top:30px;
+    transform: translateY(100%);
+    }
+    #footer {
+    width: 99%;
+    text-align: center;
+    display: inline-block;
+
+
+
+    }
+    address{
+        color:rgb(197, 197, 197);
+    }
+

@@ -1,0 +1,36 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="myBoardMapper">
+	<resultMap type="myBoardDto" id="myBoardMap">
+		<result column="SEQ" property="seq"/>
+		<result column="WRITER" property="writer"/>
+		<result column="TITLE" property="title"/>
+		<result column="CONTENT" property="content"/>
+		<result column="REGDATE" property="regdate"/>
+	</resultMap>
+
+	<select id="selectList" resultType="myBoardDto">
+		SELECT SEQ,WRITER,TITLE,CONTENT,REGDATE FROM MYBOARD ORDER BY REGDATE 
+	
+	</select>
+	<select id="selectOne" parameterType="int" resultType="myBoardDto">
+		SELECT SEQ,WRITER,TITLE,CONTENT,REGDATE FROM MYBOARD WHERE SEQ = #{seq}
+	
+	</select>
+	
+	<insert id="insert" parameterType="myBoardDto">
+		INSERT INTO MYBOARD VALUES(MYBOARDSEQ.NEXTVAL,#{writer},#{title},#{content},SYSDATE) 
+	</insert>
+	
+	<update id="update" parameterType="myBoardDto">
+  		UPDATE MYBOARD SET TITLE =#{title},CONTENT=#{content} WHERE SEQ = #{seq}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+  		DELETE FROM MYBOARD WHERE SEQ = #{seq}
+	</delete>
+
+
+</mapper>

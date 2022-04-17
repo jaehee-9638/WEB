@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 여기로와서 값 넣어서 컨트롤러로 간다 -->
+</head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script type="text/javascript">
+//encodeURIComponent() 함수는 URI로 데이터를 전달하기 위해서 문자열을 인코딩
+//val() 값을 가져오거나 설정
+	function getParameterValues() {
+		
+		var name = "name="+encodeURIComponent($("#name").val());
+		var kor = "kor="+$("#kor").val();
+		var eng = "eng="+$("#eng").val();
+		var math = "math="+$("#math").val();
+		
+		return "?" + name + "&" + kor + "&" + eng + "&" + math;
+		
+		
+	}
+
+//여기로 와서 값 받아서 페이지에 찍고
+//ajax  url:데이터를 전송할url dataType:서버가 리턴하는 데이터타입 success:ajax통신에 성공했을때 호출될 이벤트 헨들러 error: 에러났을때실행될거
+	$(function(){
+		
+		$("#process").click(function(){
+			var queryString = getParameterValues();
+			//쿼리스트링은 위에서 가져온다 ㅇ거는 
+			
+			$.ajax({
+				url: "score.do"+queryString,
+				dataType: "json",
+				success:function(msg){
+					// msg -> {"name":name, "sum":sum, "avg":avg}
+					console.log(msg.name)
+					console.log(msg.sum)
+					console.log(msg.avg)
+					$("#result").html(decodeURIComponent(msg.name) + "의 총점" + msg.sum + "\n평균:" + msg.avg);
+				},
+				error:function(){
+					alert("통신실패");
+				}
+			
+			});
+		});
+	});
+	
+</script>
+<body>
+
+<h1>성적 처리 프로그램</h1>
+<!--처음에 여기로 와서 값 다 입력받은후에 스크립트 처리하고  -->
+
+	이름 : <input type="text" id="name"><br>
+	국어 : <input type="text" id="kor"><br>
+	영어 : <input type="text" id="eng"><br>
+	수학 : <input type="text" id="math"><br>
+	<!-- 이버튼 클릭하면 프로세스라는 아이디로 적용시켜서 위에 함수로 간다.  -->
+	<input type="button" id="process" value="성적처리"><br>
+	
+	<div id ="result">
+	<!-- 위에 스크립트에 #result부분이 실행되면 이 위치에 실행된다는 의미임  -->
+	</div>
+</body>
+</html>

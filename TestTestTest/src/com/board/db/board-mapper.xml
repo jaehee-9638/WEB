@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+
+<mapper namespace="com.board.mapper">
+	<resultMap type="BoardDto" id="boardResult">
+		<result property="freecomm_seq" column="FREECOMM_SEQ" />
+		<result property="freecomm_id" column="FREECOMM_ID" />
+		<result property="freecomm_title" column="FREECOMM_TITLE" />
+		<result property="freecomm_content" column="FREECOMM_CONTENT" />
+		<result property="freecomm_regdate" column="FREECOMM_REGDATE" />
+		<result property="freecomm_count" column="FREECOMM_COUNT" />
+	</resultMap>
+
+	<!-- 
+	selectList 는 리턴타입이 List<Dto>
+	selectOne은 리턴타입 dto 파라미터 int
+	selectPaging 은 리턴타입list<dto> 파라미터  int
+	insert는 리턴타입 int 파라미터 dto
+	delete는 리턴타입 int 파라미터 int 
+	update는 리턴타입 int 파라미터 dto 
+	 -->
+	<select id="selectAllList" resultMap="boardResult">
+		SELECT FREECOMM_SEQ, FREECOMM_ID, FREECOMM_TITLE, FREECOMM_CONTENT, FREECOMM_REGDATE FROM FREECOMM ORDER BY FREECOMM_SEQ
+	</select>
+	<!-- <select id="selectPaging" parameterType="Paging" resultType="int"  >
+		 SELECT * FROM ( SELECT * FROM ( SELECT ROWNUM AS ROW_NUM, FREECOMM.* FROM FREECOMM 
+		 WHERE ROW_NUM <![CDATA[>=]]> BEGINPAGE ) WHERE ROW_NUM <![CDATA[<=]]> ENDPAGE 
+		 
+	</select> -->
+	<!-- 리절트맵 이쪽 다시 확인하기 맞나..? -->
+	<select id="selectOneByTitle" parameterType="int" resultType="BoardDto">
+		SELECT FREECOMM_SEQ, FREECOMM_ID, FREECOMM_TITLE, FREECOMM_CONTENT, FREECOMM_REGDATE FROM FREECOMM WHERE FREECOMM_SEQ=#{freecomm_seq}
+	</select>
+	
+	<insert id="insert" parameterType="BoardDto">
+		INSERT INTO FREECOMM
+		VALUES(FREECOMMSEQ.NEXTVAL, #{freecomm_id}, #{freecomm_title}, #{freecomm_content}, SYSDATE)
+	</insert>
+
+	<delete id="delete" parameterType="BoardDto">
+		DELETE FROM FREECOMM WHERE FREECOMM_SEQ = #{freecomm_seq} 
+	</delete>
+	<update id="update" parameterType="BoardDto">
+		UPDATE FREECOMM SET FREECOMM_TITLE = #{freecomm_title}, FREECOMM_CONTENT = #{freecomm_content} WHERE FREECOMM_SEQ = #{freecomm_seq}
+	</update>
+
+</mapper>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Jsp04_LoginBoard&apos;" deleteContents="false" description="Delete resource &apos;Jsp04_LoginBoard&apos;" element1="/Jsp04_LoginBoard" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1632996145822"/>
+</session>

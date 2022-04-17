@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 프로그램 주 진입 이쪽에서 input으로 아이디 비밀번호 받아서 command=login으로 보낸다.  -->
+<form action="logincontroller.jsp" method="post">
+		<input type="hidden" name="command" value="login">
+		<table border="1">
+			<col width="100">
+			<col width="100">
+			<tr>
+				<th>ID</th>
+				<td><input type="text" name="myid"></td>
+			</tr>
+			<tr>
+				<th>PW</th>
+				<td><input type="password" name="mypw"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<input type="submit" value="login">
+					<input type="button" value="regist" onclick="location.href='logincontroller.jsp?command=registform'">
+					<!-- regist버튼 누르면 command=registmform으로 이동한다.  -->
+				</td>
+			</tr>
+		</table>
+	
+	</form>
+
+
+</body>
+</html>

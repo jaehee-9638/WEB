@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 아이디 비밀번호 입력화면 : 로그인 회원가입 버튼 만들자  -->
+	
+<form action ="loginController.jsp">
+<input type="hidden" name="command" value="login">
+
+	<table>
+		<tr>
+			<th>ID</th>
+			<td><input type="text" name="myid"></td>
+		</tr>
+		<tr>
+			<th>PW</th>
+			<td><input type="text" name="mypw"></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="button" value="회원가입" onclick="location.href='loginController.jsp?command=regist'">
+				<input type="submit" value="로그인">
+			</td>
+		</tr>
+	</table>
+</form>
+	
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Jsp02_MultiDel/src/com/board/db/myboard.sql&apos; to &apos;mdboard.sql&apos;" description="Rename resource &apos;myboard.sql&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/board/db/myboard.sql" name="mdboard.sql" stamp="1634232412505" updateReferences="true"/>
+</session>
